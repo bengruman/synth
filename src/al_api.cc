@@ -1,4 +1,11 @@
+#include <AL/al.h>
+#include <AL/alc.h>
+
+#include <iostream>
+
 #include "al_api.h"
+#include "synth_err.h"
+
 #define DEBUG std::cout << "DEBUG" << std::endl;
 
 Context::Context(ALCchar * device_name)

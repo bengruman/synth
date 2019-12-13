@@ -1,7 +1,10 @@
+#ifndef AL_API_H
+#define AL_API_H
+
+#include <stddef.h>
+
 #include <AL/al.h>
 #include <AL/alc.h>
-
-#include "synth_err.h"
 
 #define FORMAT          AL_FORMAT_MONO16
 #define SAMPLE_RATE     44100
@@ -42,3 +45,5 @@ private:
     ALuint  als;
     Context * c;
 };
+
+#endif

@@ -1,4 +1,5 @@
-#include <iostream>
+#ifndef SYNTH_ERR_H
+#define SYNTH_ERR_H
 
 #include <AL/al.h>
 #include <AL/alc.h>
@@ -19,4 +20,6 @@
 #define KEYBOARD_ACCESS_FAILURE_MSG         "Failed to access keyboard"
 
 char * alErrStr(ALenum error);
-char * alcErrStr(ALenum error);
+char * alcErrStr(ALCenum error);
+
+#endif

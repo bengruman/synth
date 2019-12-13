@@ -1,15 +1,15 @@
 CC = g++
 
-LIBS = -lopenal
+LIBS = -lopenal -lpthread
 
 INCDIR = inc
 SRCDIR = src
 OBJDIR = obj
 
-_DEPS = synth.h synth_err.h al_api.h
+_DEPS = al_api.h keyboard.h synth.h synth_err.h
 DEPS = $(patsubst %,$(INCDIR)/%,$(_DEPS))
 
-_OBJ = main.o synth_err.o al_api.o
+_OBJ = al_api.o keyboard.o main.o synth.o synth_err.o
 OBJ = $(patsubst %,$(OBJDIR)/%,$(_OBJ))
 
 CFLAGS = -I$(INCDIR)

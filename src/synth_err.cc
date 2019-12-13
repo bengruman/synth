@@ -1,3 +1,8 @@
+#include <stdio.h>
+
+#include <AL/al.h>
+#include <AL/alc.h>
+
 #include "synth_err.h"
 
 char * alErrStr(ALenum error)
@@ -30,7 +35,7 @@ char * alErrStr(ALenum error)
     return str;
 }
 
-char * alcErrStr(ALenum error)
+char * alcErrStr(ALCenum error)
 {
     static char str[24];
     switch(error)
